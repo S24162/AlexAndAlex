@@ -1,0 +1,53 @@
+<header th:fragment="header-nav">
+  <a th:href="@{/}"><img th:src="@{/assets/icons/company-logo.svg}" alt="Company logo" class="logo" /></a>
+  <div class="desktop-nav">
+    <nav>
+      <a th:href="@{/}" th:classappend="${page == 'home'} ? 'active'">Home</a>
+      <a th:href="@{/gallery}" th:classappend="${page == 'gallery'} ? 'active'">Galeria</a>
+      <a th:href="@{/price}" th:classappend="${page == 'price'} ? 'active'">Ceny</a>
+      <a th:href="@{/schedule}" th:classappend="${page == 'schedule'} ? 'active'">Harmonogram</a>
+      <a th:href="@{/terms}" th:classappend="${page == 'terms'} ? 'active'">Warunki</a>
+    </nav>
+  </div>
+  <a href="tel:+48123456789" class="phone-number">+48 123 456 789</a>
+  <button class="burger-button">
+    <svg class="burger-icon" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 2H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+      <path d="M2 11H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+      <path d="M2 20H26" stroke="white" stroke-width="3" stroke-linecap="round" />
+    </svg>
+  </button>
+</header>
+
+
+<div th:fragment="menu-overlay" class="menu-overlay">
+  <div class="menu-slide">
+    <nav>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/gallery}">Galeria</a>
+      <a th:href="@{/price}">Ceny</a>
+      <a th:href="@{/schedule}">Harmonogram</a>
+      <a th:href="@{/terms}">Warunki</a>
+    </nav>
+  </div>
+</div>
+
+
+<footer th:fragment="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <a href="tel:+48123456789" class="footer-phone">+48 123 456 789</a>
+      <img th:src="@{/assets/icons/company-logo.svg}" alt="Company logo" class="footer-logo"/>
+    </div>
+    <div class="footer-right">
+      <div class="footer-contact-item">
+        <span class="footer-label font-roboto-mono">Lokalizacja:</span>
+        <span class="footer-value font-roboto-mono">Warszawska 246,05-082 Babice Nowe</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-label font-roboto-mono">E-mail:</span>
+        <span class="footer-value font-roboto-mono">papierzlubidzieci@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</footer>

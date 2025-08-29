@@ -1,0 +1,415 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 166px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 166px;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  padding: 0 46px;
+}
+
+.alex-section {
+  padding: 26px 16px 0 16px;
+  text-align: left;
+}
+
+.alex-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  color: black;
+}
+
+.ampersand {
+  font-size: 8px;
+}
+
+.alex-description {
+  display: block;
+  padding: 14px 46px 26px 46px;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  text-align: left;
+}
+
+.content-section-1 {
+  position: relative;
+  padding: 0 16px;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+}
+
+.content-text-box {
+  background-color: #806247;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-title {
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.content-description {
+  color: #dbd3cb;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.full-width-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.content-section-2 {
+  position: relative;
+}
+
+.bg-image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  right: 16px;
+  background-color: rgba(128, 98, 71, 0.85);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overlay-title {
+  color: #fffffd;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.overlay-description {
+  color: #dbd3cb;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+    padding: 0 60px;
+  }
+
+  .alex-section {
+    padding: 40px 60px;
+    text-align: center;
+  }
+
+  .alex-title {
+    font-size: 16px;
+  }
+
+  .ampersand {
+    font-size: 12px;
+  }
+
+  .alex-description {
+    padding: 20px 0 0 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .content-section-1 {
+    padding: 0 40px;
+    margin: 40px 0;
+  }
+
+  .content-text-box {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .content-title {
+    font-size: 16px;
+  }
+
+  .content-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .full-width-image {
+    height: 400px;
+  }
+
+  .content-section-2 {
+    margin: 40px 0;
+  }
+
+  .overlay-content {
+    left: 40px;
+    right: 40px;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .overlay-title {
+    font-size: 16px;
+  }
+
+  .overlay-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-section {
+    height: 40vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    height: 40vh;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    padding: 0 80px;
+    max-width: 800px;
+    line-height: 1.3;
+  }
+
+  .alex-section {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .alex-title {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .ampersand {
+    font-size: 20px;
+  }
+
+  .alex-description {
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .content-section-1 {
+    padding: 0;
+    margin: 80px 0;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .content-image {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+  }
+
+  .content-text-box {
+    padding: 60px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .content-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .full-width-image {
+    height: 500px;
+    margin: 80px 0;
+  }
+
+  .content-section-2 {
+    margin: 80px 0;
+    position: relative;
+  }
+
+  .bg-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    background-color: rgba(128, 98, 71, 0.95);
+    padding: 60px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    backdrop-filter: blur(2px);
+  }
+
+  .overlay-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .overlay-description {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-section {
+    height: 40vh;
+    min-height: 600px;
+  }
+
+  .hero-image {
+    height: 40vh;
+    min-height: 600px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    padding: 0 100px;
+    max-width: 1000px;
+    line-height: 1.2;
+  }
+
+  .alex-section {
+    padding: 100px 80px;
+    max-width: 1400px;
+    gap: 80px;
+  }
+
+  .alex-title {
+    font-size: 36px;
+  }
+
+  .ampersand {
+    font-size: 24px;
+  }
+
+  .alex-description {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .content-section-1 {
+    margin: 0 auto;
+    max-width: 2000px;
+  }
+
+  .content-image {
+    min-height: 500px;
+  }
+
+  .content-text-box {
+    padding: 80px;
+    gap: 40px;
+  }
+
+  .content-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .content-description {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .full-width-image {
+    height: 600px;
+    margin: 120px 0;
+  }
+
+  .content-section-2 {
+    margin: 120px 0;
+  }
+
+  .bg-image {
+    height: 500px;
+  }
+
+  .overlay-content {
+    left: 80px;
+    padding: 80px;
+    gap: 40px;
+    max-width: 600px;
+  }
+
+  .overlay-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .overlay-description {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}

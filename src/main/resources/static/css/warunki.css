@@ -1,0 +1,67 @@
+.warunki-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+  opacity: 0.3;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.warunki-text {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  line-height: 1.5;
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .warunki-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .warunki-text {
+    font-size: 14px;
+    padding: 0 60px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .warunki-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  .warunki-title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  .warunki-text {
+    font-size: 16px;
+    padding: 0 80px;
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    line-height: 1.7;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .warunki-title {
+    font-size: 56px;
+    margin-bottom: 60px;
+  }
+
+  .warunki-text {
+    font-size: 18px;
+    max-width: 1000px;
+    line-height: 1.8;
+  }
+}

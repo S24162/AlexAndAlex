@@ -1,0 +1,322 @@
+.harmonogram-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+  opacity: 0.3;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.search-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  color: black;
+  flex-shrink: 0;
+}
+
+.search-text {
+  font-size: 10px;
+  font-weight: 500;
+  color: black;
+  line-height: 1.4;
+}
+
+.search-block {
+  display: flex;
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #806247;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.progress-title {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 32px 0;
+}
+
+.progress-container {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin: 0 24px 8px 24px;
+}
+
+.progress-step.active {
+  background-color: #e8f5e8;
+  border-color: #4caf50;
+}
+
+.progress-step.inactive {
+  background-color: #ffeaea;
+  border-color: #f44336;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.progress-step.active .step-icon {
+  background-color: #4caf50;
+  color: white;
+}
+
+.progress-step.inactive .step-icon {
+  background-color: #f44336;
+  color: white;
+}
+
+.step-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+}
+
+.progress-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  color: #666;
+}
+
+@media screen and (min-width: 768px) {
+  .harmonogram-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .search-info {
+    padding: 0 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .search-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search-text {
+    font-size: 12px;
+  }
+
+  .search-block {
+    padding: 0 40px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-input {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .progress-title {
+    font-size: 18px;
+    margin: 40px 0;
+  }
+
+  .progress-container {
+    padding: 0 40px;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+
+  .progress-step {
+    padding: 12px 20px;
+    margin: 0 0 12px 0;
+    gap: 20px;
+  }
+
+  .step-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .step-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .harmonogram-title {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+
+  .search-info {
+    padding: 0 60px;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+  }
+
+  .search-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .search-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .search-block {
+    padding: 0 60px;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-input {
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+
+  .search-button {
+    padding: 16px 24px;
+    font-size: 18px;
+  }
+
+  .progress-title {
+    font-size: 24px;
+    margin: 60px 0;
+  }
+
+  .progress-container {
+    padding: 0 60px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .progress-step {
+    padding: 20px 24px;
+    margin: 0;
+    gap: 24px;
+    border-radius: 16px;
+  }
+
+  .step-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .step-text {
+    font-size: 16px;
+  }
+
+  .progress-arrow {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    min-width: 1200px;
+  }
+
+  .harmonogram-title {
+    font-size: 56px;
+    margin-bottom: 60px;
+  }
+
+  .search-info {
+    max-width: 1400px;
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+
+  .search-text {
+    font-size: 16px;
+  }
+
+  .search-block {
+    max-width: 1200px;
+    margin-bottom: 80px;
+  }
+
+  .progress-title {
+    font-size: 28px;
+    margin: 80px 0;
+  }
+
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin-bottom: 100px;
+    gap: 20px;
+  }
+
+  .progress-step {
+    padding: 24px 32px;
+    gap: 32px;
+  }
+
+  .step-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .step-text {
+    font-size: 18px;
+  }
+}

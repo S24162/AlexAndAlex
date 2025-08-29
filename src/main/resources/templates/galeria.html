@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria - Furniture</title>
+  <link rel="stylesheet" th:href="@{/css/common.css}"/>
+  <link rel="stylesheet" th:href="@{/css/galeria.css}"/>
+</head>
+
+<body>
+
+<header th:replace="~{fragments/common.html :: header-nav}"></header>
+
+<div th:replace="~{fragments/common.html :: menu-overlay}"></div>
+
+<main>
+  <h1 class="gallery-title font-roboto-mono">Galeria</h1>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img th:src="@{/assets/images/gallery-kitchen-1.avif}"
+           alt="Custom kitchen project example 1"
+           class="gallery-image"/>
+      <div class="gallery-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <span class="gallery-text font-roboto-mono">Zapierdalamy dla was jak cholera!</span>
+    </div>
+
+    <div class="gallery-item">
+      <img th:src="@{/assets/images/gallery-kitchen-2.avif}"
+           alt="Custom kitchen project example 2"
+           class="gallery-image"/>
+      <div class="gallery-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <span class="gallery-text font-roboto-mono">Walczymy o jakość wykonanych robot!</span>
+    </div>
+  </div>
+</main>
+
+<footer th:replace="~{fragments/common.html :: footer}"></footer>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture</title>
+  <link rel="stylesheet" th:href="@{/css/common.css}"/>
+  <link rel="stylesheet" th:href="@{/css/index.css}"/>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"/>
+</head>
+<body>
+
+<header th:replace="~{fragments/common.html :: header-nav}"></header>
+
+<div th:replace="~{fragments/common.html :: menu-overlay}"></div>
+
+<main>
+  <div class="hero-section">
+    <img th:src="@{/assets/images/hero-banner.avif}" alt="Custom furniture workshop" class="hero-image"/>
+    <h1 class="hero-title font-raleway">Wykonujemy meble na wymiar aż tak dobrą, że zrobi Ci się niedobrze!</h1>
+  </div>
+  <div class="alex-section">
+    <span class="alex-title font-raleway">Alex <span class="ampersand">&</span> Alex</span>
+    <span class="alex-description font-roboto-flex"
+    >Tworzymy Meble na Wymiar tak szybko, dobrze i tanio jak da się.</span
+    >
+  </div>
+
+  <div class="content-section-1">
+    <img th:src="@{/assets/images/furniture-showcase-1.avif}" alt="Custom kitchen cabinets" class="content-image"/>
+    <div class="content-text-box">
+      <span class="content-title font-roboto-flex">
+            Pracujemy nad Twoimi szafkami dzień i noc, marząc tylko, by nie schrzanić go.
+      </span>
+      <span class="content-description font-open-sans">
+        Naszą siłą napędową jest tworzenie doskonale pięknych mebli, które przetrwają podróż w czasie zarówno pod
+            względem estetycznym jak i jakościowym oraz wytrzymałościowym.
+      </span>
+    </div>
+  </div>
+
+  <img th:src="@{/assets/images/furniture-showcase-2.avif}" alt="Modern kitchen interior" class="full-width-image"/>
+  <div class="content-section-2">
+    <img th:src="@{/assets/images/furniture-showcase-3.avif}" alt="Kitchen cabinet installation" class="bg-image"/>
+    <div class="overlay-content">
+      <span class="overlay-title font-roboto-flex">
+        Pracujemy nad Twoimi szafkami święta i soboty, marząc tylko, by nie dać ciała.
+      </span>
+      <span class="overlay-description font-open-sans">
+        Nasze przepiękne teksty pod zdjęciami biorą się z najlepszych zapytań do chatu gpt. Bierzemy z nich i
+            kopipastimy tylko najlepsi odpowiedzi, żeby oczy klientowi zapchać najpiękniejszym nawijaniem makaronu na
+            uszy.
+      </span>
+    </div>
+  </div>
+</main>
+
+<footer th:replace="~{fragments/common.html :: footer}"></footer>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

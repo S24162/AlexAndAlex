@@ -1,0 +1,416 @@
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.font-roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.font-roboto-flex {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}
+
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: white;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav nav {
+  display: flex;
+  gap: 40px;
+}
+
+.desktop-nav nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav nav a:hover,
+.desktop-nav nav a.active {
+  color: #806247;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.phone-number {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.burger-button {
+  background-color: #806247;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-icon {
+  width: 20px;
+  height: 16px;
+}
+
+.burger-icon path {
+  stroke: white;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.menu-slide {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: 300;
+  padding: 80px 20px 20px 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+}
+
+.menu-slide nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-slide nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  transition: color 0.2s ease;
+}
+
+.menu-slide nav a:hover {
+  color: #806247;
+}
+
+.menu-slide nav a:last-child {
+  border-bottom: none;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-overlay.active .menu-slide {
+  right: 0;
+}
+
+.footer {
+  background-color: #d4c5b9;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  margin-top: auto;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-phone {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-logo {
+  height: 30px;
+  width: auto;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-label {
+  font-size: 8px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-value {
+  font-size: 10px;
+  font-weight: 500;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .phone-number {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .footer {
+    height: 100px;
+    padding: 16px 40px;
+  }
+
+  .footer-logo {
+    height: 40px;
+  }
+
+  .footer-phone {
+    font-size: 16px;
+  }
+
+  .footer-label {
+    font-size: 10px;
+  }
+
+  .footer-value {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desktop-nav {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+
+  header {
+    padding: 25px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .phone-number {
+    font-size: 18px;
+  }
+
+  .footer {
+    height: 120px;
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .footer-logo {
+    height: 50px;
+  }
+
+  .footer-phone {
+    font-size: 18px;
+  }
+
+  .footer-label {
+    font-size: 12px;
+  }
+
+  .footer-value {
+    font-size: 14px;
+  }
+
+  .footer-left {
+    gap: 15px;
+  }
+
+  .footer-right {
+    gap: 8px;
+  }
+
+  .footer-contact-item {
+    gap: 4px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    padding: 30px 80px;
+  }
+
+  .desktop-nav nav {
+    gap: 50px;
+  }
+
+  .desktop-nav nav a {
+    font-size: 18px;
+  }
+
+  .footer {
+    height: 140px;
+    padding: 24px 0;
+  }
+
+  .footer-content {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 80px;
+  }
+
+  .footer-logo {
+    height: 60px;
+  }
+
+  .footer-phone {
+    font-size: 20px;
+  }
+
+  .footer-label {
+    font-size: 14px;
+  }
+
+  .footer-value {
+    font-size: 16px;
+  }
+
+  .footer-left {
+    gap: 18px;
+  }
+
+  .footer-right {
+    gap: 10px;
+  }
+
+  .footer-contact-item {
+    gap: 6px;
+  }
+
+  main {
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harmonogram - Furniture</title>
+  <link rel="stylesheet" th:href="@{/css/common.css}"/>
+  <link rel="stylesheet" th:href="@{/css/harmonogram.css}"/>
+</head>
+
+<body>
+
+<header th:replace="~{fragments/common.html :: header-nav}"></header>
+
+<div th:replace="~{fragments/common.html :: menu-overlay}"></div>
+
+<main>
+  <h1 class="harmonogram-title font-roboto-mono">Harmonogram</h1>
+
+  <div class="search-info">
+    <svg class="search-icon"
+         width="32"
+         height="32"
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+          d="M23.6286 21.8353L18.0719 16.2912C19.459 14.5272 20.2109 12.3471 20.2062 10.1031C20.2062 8.10489 19.6136 6.15156 18.5035 4.49012C17.3934 2.82867 15.8155 1.53373 13.9694 0.769056C12.1233 0.00437748 10.0919 -0.195697 8.13208 0.194132C6.17227 0.583962 4.37207 1.54619 2.95913 2.95913C1.54619 4.37207 0.583962 6.17227 0.194132 8.13208C-0.195697 10.0919 0.00437748 12.1233 0.769056 13.9694C1.53373 15.8155 2.82867 17.3934 4.49012 18.5035C6.15156 19.6136 8.10489 20.2062 10.1031 20.2062C12.3471 20.2109 14.5272 19.459 16.2912 18.0719L21.8353 23.6286C22.0731 23.8664 22.3956 24 22.7319 24C23.0683 24 23.3908 23.8664 23.6286 23.6286C23.8664 23.3908 24 23.0683 24 22.7319C24 22.3956 23.8664 22.0731 23.6286 21.8353ZM4.74846 15.5209C3.49422 14.2944 2.70439 12.6707 2.51373 10.9269C2.32307 9.183 2.74338 7.42702 3.70296 5.95848C4.66254 4.48995 6.10193 3.39986 7.77557 2.87419C9.4492 2.34852 11.2534 2.41984 12.8803 3.07597C14.5072 3.73211 15.8561 4.93242 16.6967 6.47211C17.5374 8.01181 17.8178 9.79549 17.4901 11.5189C17.1624 13.2422 16.2468 14.7985 14.8997 15.9221C13.5526 17.0458 11.8573 17.6672 10.1031 17.6804C8.09414 17.6786 6.16811 16.8792 4.74846 15.4577V15.5209Z"
+          fill="#222221"/>
+    </svg>
+    <span class="search-text font-roboto-flex"
+    >Aby sprawdzić na jakim etapie znajduje się twoje zamówienie, wprowadź kod zamówienia.</span
+    >
+  </div>
+
+  <div class="search-block">
+    <input type="text" class="search-input" placeholder="Wpisz numer zamówienia"/>
+    <button class="search-button">Szukaj</button>
+  </div>
+
+  <span class="progress-title font-roboto-flex">Postępy zamówienia</span>
+
+  <div class="progress-container">
+    <div class="progress-step active">
+      <div class="step-icon">
+        <img th:src="@{/assets/icons/progress-step-icon.svg}" alt="Progress step indicator"/>
+      </div>
+      <span class="step-text font-roboto-flex">Przyjęto w pracę</span>
+    </div>
+
+    <div class="progress-arrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M7 10l5 5 5-5"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="progress-step active">
+      <div class="step-icon">
+        <img th:src="@{/assets/icons/progress-step-icon.svg}" alt="Progress step indicator"/>
+      </div>
+      <span class="step-text font-roboto-flex">Cięcie materiału</span>
+    </div>
+
+    <div class="progress-arrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 10l5 5 5-5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="progress-step inactive">
+      <div class="step-icon">
+        <img th:src="@{/assets/icons/progress-step-icon.svg}" alt="Progress step indicator"/>
+      </div>
+      <span class="step-text font-roboto-flex">Skręcanie na warsztacie</span>
+    </div>
+
+    <div class="progress-arrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 10l5 5 5-5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="progress-step inactive">
+      <div class="step-icon">
+        <img th:src="@{/assets/icons/progress-step-icon.svg}" alt="Progress step indicator"/>
+      </div>
+      <span class="step-text font-roboto-flex">Rozpoczęcie montażu</span>
+    </div>
+  </div>
+</main>
+
+<footer th:replace="~{fragments/common.html :: footer}"></footer>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

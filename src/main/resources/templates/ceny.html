@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pl"
+      xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ceny - Furniture</title>
+  <link rel="stylesheet" th:href="@{/css/common.css}"/>
+  <link rel="stylesheet" th:href="@{/css/ceny.css}"/>
+</head>
+
+<body>
+
+<header th:replace="~{fragments/common.html :: header-nav}"></header>
+
+<div th:replace="~{fragments/common.html :: menu-overlay}"></div>
+
+<main>
+  <h1 class="prices-title font-roboto-mono">Ceny</h1>
+
+  <div class="prices-intro">
+    <span class="intro-title font-roboto-flex">Wycena kuchni online</span>
+    <span class="intro-text font-roboto-flex"
+    >Chcesz sprawdzić, ile może kosztować Twoja kuchnia na wymiar? Skorzystaj z naszego
+          <strong>kalkulatora</strong> – to szybki i darmowy sposób, żeby wstępnie poznać cenę, jeszcze zanim spotkasz
+          się z naszym doradcą.</span
+    >
+    <span class="intro-text font-roboto-flex"
+    >W naszej galerii możesz zobaczyć <strong>przykłady i ceny</strong> prawdziwych kuchni, które już
+          zrealizowaliśmy.</span
+    >
+  </div>
+
+  <div class="calculator-section">
+    <span class="section-title font-roboto-flex">1. Pomiar długości zabudowy</span>
+    <div class="section-content">
+      <img th:src="@{/assets/images/calculator-measurement-1.avif}"
+           alt="Kitchen cabinet measurement diagram 1"
+           class="calculator-image"/>
+      <div class="inputs-grid">
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">A1 – Długość zabudowy dolnej, cm</span>
+          <input type="number" class="input-field" id="a1" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">B1 – Długość zabudowy górnej, cm</span>
+          <input type="number" class="input-field" id="b1" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">C1 – Długość zabudowy wysokiej, cm</span>
+          <input type="number" class="input-field" id="c1" placeholder="0"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="calculator-section">
+    <span class="section-title font-roboto-flex">2. Pomiar wysokości zabudowy</span>
+    <div class="section-content">
+      <img th:src="@{/assets/images/calculator-measurement-2.avif}"
+           alt="Kitchen cabinet measurement diagram 2"
+           class="calculator-image"/>
+      <div class="inputs-grid">
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">A2 – Długość zabudowy dolnej, cm</span>
+          <input type="number" class="input-field" id="a2" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">B2 – Długość zabudowy górnej, cm</span>
+          <input type="number" class="input-field" id="b2" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">C2 – Długość zabudowy wysokiej, cm</span>
+          <input type="number" class="input-field" id="c2" placeholder="0"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="calculator-section">
+    <span class="section-title font-roboto-flex">3. Pomiar głębokości zabudowy</span>
+    <div class="section-content">
+      <img th:src="@{/assets/images/calculator-measurement-3.avif}"
+           alt="Kitchen cabinet measurement diagram 3"
+           class="calculator-image"/>
+      <div class="inputs-grid">
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">A3 – Długość zabudowy dolnej, cm</span>
+          <input type="number" class="input-field" id="a3" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">B3 – Długość zabudowy górnej, cm</span>
+          <input type="number" class="input-field" id="b3" placeholder="0"/>
+        </div>
+        <div class="input-row">
+          <span class="input-label font-roboto-flex">C3 – Długość zabudowy wysokiej, cm</span>
+          <input type="number" class="input-field" id="c3" placeholder="0"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span class="section-title font-roboto-flex">4. Materiały</span>
+  <label class="input-label font-roboto-flex" for="materialSelect">Materiał </label><select id="materialSelect">
+    <option value="1">Płyta laminowana</option>
+    <option value="2">MDF lakierowany</option>
+  </select>
+
+  <label for="colorSelect">Kolor </label><select id="colorSelect">
+    <option value="1">Biały mat</option>
+    <option value="2">Czarny połysk</option>
+  </select>
+
+  <label for="mechanismSelect">Mechanizmy </label><select id="mechanismSelect">
+    <option value="1">Szuflada BLUM</option>
+    <option value="2">System cichy domyk</option>
+  </select>
+
+  <div class="separator"></div>
+
+  <div class="calculator-result">
+    <button class="calculate-btn font-roboto-mono" onclick="calculatePrice()">Oblicz</button>
+    <div class="price-display">
+      <span class="price-label font-roboto-mono">Przybliżona cena:</span>
+      <span class="price-value font-roboto-mono" id="priceResult">1 zł</span>
+    </div>
+  </div>
+</main>
+
+<footer th:replace="~{fragments/common.html :: footer}"></footer>
+
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
