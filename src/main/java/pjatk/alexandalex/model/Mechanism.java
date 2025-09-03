@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "mechanisms")
 @Getter
@@ -17,6 +19,6 @@ public class Mechanism {
 
    private String name;
 
-   private double pricePerUnit;
+   private BigDecimal pricePerUnit;
 }
 

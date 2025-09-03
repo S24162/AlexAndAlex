@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "colors")
 @Getter
@@ -17,5 +19,5 @@ public class Color {
 
    private String name;
 
-   private Double extraCost;
+   private BigDecimal extraCost;
 }

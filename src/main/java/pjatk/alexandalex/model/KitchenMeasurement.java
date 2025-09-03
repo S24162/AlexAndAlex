@@ -2,6 +2,8 @@ package pjatk.alexandalex.model;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "kitchen_measurements")
 public class KitchenMeasurement {
@@ -41,6 +43,6 @@ public class KitchenMeasurement {
 
 // Wynik
    @Column(name = "price")
-   private double price;
+   private BigDecimal price;
 
 }
