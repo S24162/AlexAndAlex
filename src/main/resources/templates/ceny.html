@@ -7,6 +7,7 @@
   <title>Ceny - Furniture</title>
   <link rel="stylesheet" th:href="@{/css/common.css}"/>
   <link rel="stylesheet" th:href="@{/css/ceny.css}"/>
+  <script th:src="@{/js/script.js}" defer></script>
 </head>
 
 <body>
@@ -106,18 +107,18 @@
 
   <span class="section-title font-roboto-flex">4. Materiały</span>
   <label class="input-label font-roboto-flex" for="materialSelect">Materiał </label><select id="materialSelect">
-    <option value="1">Płyta laminowana</option>
-    <option value="2">MDF lakierowany</option>
+    <option value="laminated_board">Płyta laminowana</option>
+    <option value="varnished_mdf">MDF lakierowany</option>
   </select>
 
   <label for="colorSelect">Kolor </label><select id="colorSelect">
-    <option value="1">Biały mat</option>
-    <option value="2">Czarny połysk</option>
+    <option value="white_matt">Biały mat</option>
+    <option value="black_gloss">Czarny połysk</option>
   </select>
 
   <label for="mechanismSelect">Mechanizmy </label><select id="mechanismSelect">
-    <option value="1">Szuflada BLUM</option>
-    <option value="2">System cichy domyk</option>
+    <option value="box_blum">Szuflada BLUM</option>
+    <option value="silent_closing_system">System cichy domyk</option>
   </select>
 
   <div class="separator"></div>
@@ -133,6 +134,5 @@
 
 <footer th:replace="~{fragments/common.html :: footer}"></footer>
 
-<script th:src="@{/js/script.js}"></script>
 </body>
 </html>

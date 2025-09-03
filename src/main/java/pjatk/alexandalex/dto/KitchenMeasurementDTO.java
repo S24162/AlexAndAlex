@@ -8,7 +8,6 @@ import lombok.Setter;
 @Getter
 public class KitchenMeasurementDTO {
 
-   // --- gettery i settery ---
    // sekcja 1: długości
    private double a1;
    private double b1;
@@ -25,8 +24,8 @@ public class KitchenMeasurementDTO {
    private double c3;
 
    // dodatkowe wybory użytkownika
-   private Long materialId;
-   private Long colorId;
-   private Long mechanismId;
+   private String materialId;
+   private String colorId;
+   private String mechanismId;
 }
 

@@ -50,9 +50,9 @@ function calculatePrice() {
     a3: parseFloat(document.getElementById('a3').value) || 0,
     b3: parseFloat(document.getElementById('b3').value) || 0,
     c3: parseFloat(document.getElementById('c3').value) || 0,
-    materialId: parseInt(document.getElementById('materialSelect').value),
-    colorId: parseInt(document.getElementById('colorSelect').value),
-    mechanismId: parseInt(document.getElementById('mechanismSelect').value)
+    materialId: document.getElementById('materialSelect').value,
+    colorId: document.getElementById('colorSelect').value,
+    mechanismId: document.getElementById('mechanismSelect').value
   };
 
   // wysyłamy do backendu
