@@ -1,5 +1,5 @@
 # Etap budowania - budujemy aplikację w kontenerze z Mavenem i JDK 21
-FROM maven:3.9.0-eclipse-temurin-21 AS build
+FROM maven:3.9.0-openjdk-21 AS build
 
 WORKDIR /app
 
