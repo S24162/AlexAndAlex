@@ -23,7 +23,7 @@ public class ScheduleController {
    public String searchOrder(@RequestParam String orderNumber, Model model) {
       // Zrobić zapytanie do Bitrix24 i wysłać odpowiedź
       if (!orderNumber.isEmpty())
-         model.addAttribute("orderNumber", orderNumber + " from Bitrix");
+         model.addAttribute("orderNumber", orderNumber + " answer from Bitrix");
       return "harmonogram";
    }
 }
