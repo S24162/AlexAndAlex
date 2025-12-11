@@ -40,7 +40,7 @@
 <!--    <button class="search-button">Szukaj</button>-->
 <!--  </div>-->
 
-  <form class="search-block" action="/search" method="get">
+  <form class="search-block" th:action="@{/search}" method="get">
     <input th:value="${orderNumber}"  name="orderNumber" class="search-input" placeholder="Wpisz numer zamówienia"/>
     <button type="submit" class="search-button">Szukaj</button>
   </form>

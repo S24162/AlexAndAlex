@@ -14,8 +14,9 @@ public class SecurityConfig {
       http
          .csrf(AbstractHttpConfigurer::disable) // wyłącz CSRF
          .authorizeHttpRequests(auth -> auth
-            .anyRequest().permitAll() // wszystkie endpointy publiczne
-         );
+            .anyRequest().permitAll())
+         .headers(headers -> headers
+         .frameOptions(frame -> frame.sameOrigin()));
       return http.build();
    }
 }

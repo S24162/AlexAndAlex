@@ -1,0 +1,10 @@
+// TODO Ogólne uwagi do kodu:
+// TODO Brak testów
+// TODO Sekrety powinny być trzymany w zmiennych środowiskowych
+// TODO Brak poprawnych ustawień CSRF
+// TODO KitchenMeasurementDto nie ma walidacji. PriceController akceptuje dowolne wartości.
+// TODO Brak globalnej obsługi wyjątków.
+// TODO Nieużywane klasy warto usunąć
+// TODO Warto byłoby zabezpieczyć i przetestować logikę związane z obliczeniami
+// TODO Zamiast RuntimeException lepiej stworzyć własne klasy błędów
+// TODO Można usunąć nieużywane importy
