@@ -33,8 +33,12 @@ public class KitchenMeasurementService {
          .orElseThrow(() -> new RuntimeException("Mechanism not found: " + dto.getMechanismId()));
 
       // Obliczenie powierzchni (sekcja 3: głębokości)
+      double nineDimensionSum =
+         dto.getA1() + dto.getB1() + dto.getC1()
+            + dto.getA2() + dto.getB2() + dto.getC2()
+            + dto.getA3() + dto.getB3() + dto.getC3();
       BigDecimal totalArea = BigDecimal.valueOf(
-         dto.getA3() + dto.getB3() + dto.getC3());
+         nineDimensionSum);
 
       // Cena materiału
       BigDecimal price = totalArea.multiply(material.getPricePerM2());
